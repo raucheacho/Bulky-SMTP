@@ -1,0 +1,63 @@
+# Node.js / Backend
+node_modules/
+.env
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/dist
+/.next
+/out
+/.turbo
+coverage/
+.DS_Store
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.idea/
+.vscode/
+*.iml
+
+# Build directories
+/build/
+/public/build/
+/public/assets/
+
+# React / Frontend
+/build
+/public/static
+/public/env-config.js
+/node_modules
+/.pnp
+.pnp.js
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Parcel-bundler cache
+.cache
+
+# Miscellaneous
+**/Thumbs.db
+**/.DS_Store
+**/Icon?
+**/.idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook files
+/.storybook-out
