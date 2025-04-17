@@ -1,116 +1,134 @@
-# Bulky - Bulk Email Management System
+# Bulky - Système de gestion d’emails en masse
 
-Bulky is a modern web application designed for efficient bulk email management. It provides a user-friendly interface for creating, managing, and sending bulk emails with template support.
+**Bulky** est une application web moderne conçue pour la gestion efficace des emails en masse. Elle propose une interface conviviale pour créer, gérer et envoyer des emails groupés avec prise en charge des modèles.
 
-## Features
+## 🚀 Fonctionnalités
 
-- User-friendly web interface for email management
-- Template-based email composition
-- Bulk email sending capabilities
-- Real-time status tracking
-- Docker-based deployment
+- Interface web intuitive pour la gestion des emails
+- Rédaction d’emails basée sur des modèles
+- Envoi d’emails en masse
+- Suivi du statut en temps réel
+- Déploiement via Docker
 
-## Technologies Used
+## 🛠️ Technologies utilisées
 
 ### Frontend
+
 - React
-- Vite (Build tool)
+- Vite (outil de build)
 - Node.js v18
-- NGINX (Production server)
+- NGINX (serveur de production)
 
 ### Backend
+
 - Node.js v18
 - Express.js
 - Docker
 
-### Database
+### Base de données
+
 - PostgreSQL
 
-## Project Structure
+## 🗂 Structure du projet
 
-```
+```bash
 bulky/
-├── frontend/          # React frontend application
-│   ├── src/          # Source code
-│   ├── public/       # Static files
-│   └── Dockerfile    # Frontend container configuration
+├── .env                 # Fichier .env principal (centralisé)
+├── frontend/            # Application frontend React
+│   ├── .env -> ../.env  # Lien symbolique vers bulky/.env
+│   ├── src/             # Code source
+│   ├── public/          # Fichiers statiques
+│   └── Dockerfile       # Configuration du conteneur frontend
 │
-├── backend/          # Node.js backend application
-│   ├── src/         # Source code
-│   └── Dockerfile   # Backend container configuration
+├── backend/             # Application backend Node.js
+│   ├── .env -> ../.env  # Lien symbolique vers bulky/.env
+│   ├── src/             # Code source
+│   └── Dockerfile       # Configuration du conteneur backend
 │
-└── docker-compose.yml # Container orchestration
+└── docker-compose.yml   # Orchestration des conteneurs
 ```
 
-## Installation
+> 🔗 Utilise la commande suivante pour créer les liens symboliques en fonction de votre dossier :
 
-### Prerequisites
+```bash
+ln -s ../.env .env
+```
+
+## ⚙️ Installation
+
+### Prérequis
 
 - Docker Desktop
 - Docker Compose
 - Git
 
-### Setup
+### Configuration
 
-1. Clone the repository:
+1. Clone le dépôt :
+
 ```bash
 git clone https://github.com/yourusername/bulky.git
 cd bulky
 ```
 
-2. Create a `.env` file in the root directory with the following variables:
+2. Crée un fichier `.env` à la racine du projet avec les variables suivantes :
+
 ```env
 POSTGRES_USER=your_db_user
 POSTGRES_PASSWORD=your_db_password
 POSTGRES_DB=bulky_db
 DB_HOST=db
+voir plus dans le fichier .env.example
 ```
 
-3. Start the application:
+3. Lance l’application :
+
 ```bash
 docker compose up -d
 ```
 
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
+L’application sera disponible aux adresses suivantes :
 
-## Usage
+- 🖥 Frontend : http://localhost:3000
+- 🛠 API Backend : http://localhost:5000
 
-1. Access the web interface at http://localhost:3000
-2. Log in with your credentials
-3. Create email templates
-4. Upload recipient lists
-5. Schedule or send bulk emails
-6. Monitor sending status through the dashboard
+## ✨ Utilisation
 
-## Development
+1. Accède à l’interface web via http://localhost:3000
+2. Connecte-toi avec tes identifiants
+3. Crée des modèles d’emails
+4. Téléverse des listes de destinataires
+5. Programme ou envoie des emails en masse
+6. Surveille les envois via le tableau de bord
 
-To run the application in development mode:
+## 🧑‍💻 Développement
 
-1. Frontend:
+Pour exécuter l’application en mode développement :
+
+### Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-2. Backend:
+### Backend
+
 ```bash
 cd backend
 npm install
 npm run dev
 ```
 
-## Contributing
+## 🤝 Contribution
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+1. Fork du dépôt
+2. Crée une branche pour ta fonctionnalité
+3. Commit tes modifications
+4. Pousse ta branche
+5. Crée une Pull Request
 
-## License
+## 📄 Licence
 
-This project is licensed under the MIT License.
-
+Ce projet est sous licence **MIT**.
